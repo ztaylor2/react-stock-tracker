@@ -77,7 +77,7 @@ const Topics = ({ match }) => (
   </div>
 )
 
-const BasicExample = () => (
+const MainApp = () => (
   <Router>
     <div>
       <ul>
@@ -94,4 +94,4 @@ const BasicExample = () => (
     </div>
   </Router>
 )
-export default BasicExample
+export default MainApp
