@@ -12,7 +12,7 @@ class Portfolio extends Component {
     if (this.props.stocks) {
         stock = this.props.stocks.map(a_stock => {
             return (
-                <Stock stock={a_stock} />
+                <Stock key={a_stock.name} stock={a_stock} />
             );
         });
     }
