@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Projects from './components/projects';
 import Trade from './components/trade';
 import Navigation from './components/navigation';
 import Portfolio from './components/portfolio';
@@ -27,7 +26,6 @@ class App extends Component {
       <div className="App">
         <Navigation />
         My app
-        <Projects />
         <Trade />
         <Portfolio stocks={this.state.stocks} />
       </div>
