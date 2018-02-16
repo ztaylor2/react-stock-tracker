@@ -13,28 +13,28 @@ class App extends Component {
     }
 
     componentWillMount(){
-      this.setState({stocks: [
-                        {
-                    name: 'FB',
-                    value: 14
-                },
-                {
-                    name: 'AMZN',
-                    value: 1000
-                }
-      ]});
+        this.setState({stocks: [
+            {
+                name: 'FB',
+                value: 14
+            },
+            {
+                name: 'AMZN',
+                value: 1000
+            }
+        ]});  
     }
 
-  render() {
-    return (
-      <div className="App">
-        <Navigation />
-        My app
-        <Trade />
-        <Portfolio stocks={this.state.stocks} />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <Navigation />
+                My app
+                <Trade />
+                <Portfolio stocks={this.state.stocks} />
+            </div>
+        );
+    }
 }
 
 export default App;
