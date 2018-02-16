@@ -3,7 +3,6 @@ import Projects from './components/projects';
 import Trade from './components/trade';
 import Navigation from './components/navigation';
 import Portfolio from './components/portfolio';
-import Stock from './components/stock';
 import './App.css';
 
 class App extends Component {
