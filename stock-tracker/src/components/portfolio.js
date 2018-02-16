@@ -6,11 +6,12 @@ class Portfolio extends Component {
 
   render() {
 
-    console.log(this.props);
+    // console.log(this.props);
 
     let stock;
-    if (this.props.stock) {
-        stock = this.props.stock.map(a_stock => {
+    if (this.props.stocks) {
+        stock = this.props.stocks.map(a_stock => {
+            console.log(a_stock);
             <Stock />
         });
     }
