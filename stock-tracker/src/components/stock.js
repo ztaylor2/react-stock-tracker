@@ -5,7 +5,7 @@ class Stock extends Component {
     if (this.props.stock) { 
         return (
           <li className="Stock">
-            {this.props.stock.name}
+            <strong>{this.props.stock.name}</strong>: 
             {this.props.stock.value}
           </li>
         );

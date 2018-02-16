@@ -8,8 +8,13 @@ class App extends Component {
     constructor(){
         super();
         this.state = {
-            stocks: [
-                {
+            stocks: []
+        }
+    }
+
+    componentWillMount(){
+      this.setState({stocks: [
+                        {
                     name: 'FB',
                     value: 14
                 },
@@ -17,8 +22,7 @@ class App extends Component {
                     name: 'AMZN',
                     value: 1000
                 }
-            ]
-        }
+      ]});
     }
 
   render() {
