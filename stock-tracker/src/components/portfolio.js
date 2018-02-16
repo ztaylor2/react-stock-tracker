@@ -11,13 +11,14 @@ class Portfolio extends Component {
     let stock;
     if (this.props.stocks) {
         stock = this.props.stocks.map(a_stock => {
-            console.log(a_stock);
-            <Stock />
+            return (
+                <Stock stock={a_stock} />
+            );
         });
     }
     return (
       <div className="Portfolio">
-        My Portfolio
+        {stock}
       </div>
     );
   }
