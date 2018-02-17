@@ -12,6 +12,8 @@ class App extends Component {
         }
     }
 
+    // IF YOURE DOING AN AJAX CALL DO IT IN THIS LIFE CYCLE METHOD
+
     componentWillMount(){
         this.setState({stocks: [
             {
