@@ -7,12 +7,16 @@ class Trade extends Component {
                 <h3>Component to place trades</h3>
                 <form>
                     <div>
-                        <label>Title</label>
-                        <input type="text" ref="title" />
+                        <label>Buy/Sell?</label>
+                        <select ref="orderType" />
+                    </div>
+                    <div>
+                        <label>Stock Ticker</label>
+                        <input type="text" ref="stockTicker" />
                     </div>
                     <div>
                         <label>Shares</label>
-                        <input type="text" ref="shares" />
+                        <input type="text" ref="numberShares" />
                     </div>
                 </form>
             </div>
