@@ -18,7 +18,7 @@ class App extends Component {
     componentDidMount(){
         fetch('/stocks')
             .then(res => res.json())
-            .then(stocks => this.setState({ stocks }));
+            .then(stocks => this.setState({ ...stocks }));
             // console.log(this.state)
 
         // this.setState({stocks: [
