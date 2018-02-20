@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 
 class Trade extends Component {
+    constructor() {
+        super()
+        this.state = {
+            newTrade: {}
+        }
+    }
+
     static defaultProps = {
         categories: ['Buy', 'Sell']
     }
 
     handleSubmit(e) {
-        console.log('sub');
+        console.log(this.refs.stockTicker.value);
         e.preventDefault();
     }
 
@@ -17,7 +24,7 @@ class Trade extends Component {
         return (
             <div>
                 <h3>Component to place trades</h3>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit.bind(this)}>
                     <div>
                         <label>Buy/Sell?</label>
                         <select ref="orderType">
