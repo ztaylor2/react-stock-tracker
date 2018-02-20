@@ -20,7 +20,8 @@ class Trade extends Component {
                 stockTicker: this.refs.stockTicker.value,
                 numberShares: this.refs.numberShares.value
             }}, function(){
-                console.log(this.state);
+                // console.log(this.state);
+                this.props.addTrade(this.state.newTrade);
             });
         }
         e.preventDefault();
