@@ -17,14 +17,20 @@ class App extends Component {
     componentWillMount(){
         this.setState({stocks: [
             {
-                name: 'FB',
-                value: 14
+                stockTicker: 'FB',
+                numberShares: 14
             },
             {
-                name: 'AMZN',
-                value: 1000
+                stockTicker: 'AMZN',
+                numberShares: 1000
             }
         ]});  
+    }
+
+    handleAddTrade(trade) {
+        let stocks = this.state.stocks;
+        stocks.push(trade);
+        this.setState({stocks:stocks});
     }
 
     render() {
@@ -32,7 +38,7 @@ class App extends Component {
             <div className="App">
                 <Navigation />
                 My app
-                <Trade />
+                <Trade addTrade={this.handleAddTrade.bind(this)}/>
                 <Portfolio stocks={this.state.stocks} />
             </div>
         );
