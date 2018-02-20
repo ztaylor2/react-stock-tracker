@@ -13,7 +13,16 @@ class Trade extends Component {
     }
 
     handleSubmit(e) {
-        console.log(this.refs.stockTicker.value);
+        if (this.refs.stockTicker.value === '') {
+            alert('Please enter a stock ticker to place a trade.')
+        } else {
+            this.setState({newTrade: {
+                stockTicker: this.refs.stockTicker.value,
+                numberShares: this.refs.numberShares.value
+            }}, function(){
+                console.log(this.state);
+            });
+        }
         e.preventDefault();
     }
 
