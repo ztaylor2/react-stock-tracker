@@ -7,6 +7,7 @@ class Portfolio extends Component {
     render() {    
         let stock;
         if (this.props.stocks) {
+            console.log(this.props.stocks)
             stock = this.props.stocks.map(a_stock => {
                 return (
                     <Stock key={a_stock.name} stock={a_stock} />
