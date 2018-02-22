@@ -15,12 +15,13 @@ class Trade extends Component {
     handleSubmit(e) {
         if (this.refs.stockTicker.value === '') {
             alert('Please enter a stock ticker to place a trade.')
+        } else if (isNaN(this.refs.numberShares)) {
+            alert('Please enter a number for the number of shares.')
         } else {
             this.setState({newTrade: {
                 stockTicker: this.refs.stockTicker.value,
                 numberShares: this.refs.numberShares.value
             }}, function(){
-                // console.log(this.state);
                 this.props.addTrade(this.state.newTrade);
             });
         }
@@ -47,7 +48,7 @@ class Trade extends Component {
                     </div>
                     <div>
                         <label>Shares</label>
-                        <input type="text" ref="numberShares" />
+                        <input ref="numberShares" />
                     </div>
                     <input type="submit" value="Submit" />
                 </form>
