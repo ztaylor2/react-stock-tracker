@@ -10,28 +10,18 @@ class App extends Component {
         this.state = {
             stocks: []
         }
-        // this.state = {stocks: []}
     }
 
-    // IF YOURE DOING AN AJAX CALL DO IT IN THIS LIFE CYCLE METHOD
-
     componentDidMount(){
-        fetch('/stocks')
+        fetch('/stocks', {
+              headers : { 
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+               }
+
+            })
             .then(res => res.json())
             .then(stocks => this.setState({ ...stocks }));
-            // console.log(this.state)
-
-        // this.setState({stocks: [
-        //     {
-        //         stockTicker: 'FB',
-        //         numberShares: 14
-        //     },
-        //     {
-        //         stockTicker: 'AMZN',
-        //         numberShares: 1000
-        //     }
-        // ]});
-        // console.log(this.state)
     }
 
     handleAddTrade(trade) {
