@@ -1,12 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET users listing. */
+// on get request return stocks from backend
 router.get('/', function(req, res, next) {
-    // Comment out this line:
-  //res.send('respond with a resource');
-
-  // And insert something like this instead:
   res.json({stocks: [
             {
                 stockTicker: 'FB',
