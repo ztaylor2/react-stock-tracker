@@ -15,7 +15,7 @@ class Trade extends Component {
     handleSubmit(e) {
         if (this.refs.stockTicker.value === '') {
             alert('Please enter a stock ticker to place a trade.')
-        } else if (isNaN(this.refs.numberShares)) {
+        } else if (isNaN(this.refs.numberShares.value)) {
             alert('Please enter a number for the number of shares.')
         } else {
             this.setState({newTrade: {
