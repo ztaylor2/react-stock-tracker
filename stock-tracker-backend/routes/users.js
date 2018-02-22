@@ -3,20 +3,17 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-    // Comment out this line:
-  //res.send('respond with a resource');
 
-  // And insert something like this instead:
-  res.json({stocks: [
-            {
-                stockTicker: 'FB',
-                numberShares: 14
-            },
-            {
-                stockTicker: 'AMZN',
-                numberShares: 1000
-            }
-        ]});
+  // res.json({stocks: [
+  //           {
+  //               stockTicker: 'FB',
+  //               numberShares: 14
+  //           },
+  //           {
+  //               stockTicker: 'AMZN',
+  //               numberShares: 1000
+  //           }
+  //       ]});
 });
 
 module.exports = router;
