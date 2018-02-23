@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom'
 
 class Navigation extends Component {
 	render() {
@@ -8,13 +7,13 @@ class Navigation extends Component {
 				<nav>
 					<ul>
 						<li>
-							<Link to={'/trade'}>Trade</Link>
+							<a>nav1</a>
 						</li>
 						<li>
-							<Link to={'/portfolio'}>Portfolio</Link>
+							<a>nav2</a>
 						</li>
 						<li>
-							<Link to={'/somewhere'}>nav3</Link>
+							<a>nav3</a>
 						</li>
 					</ul>
 				</nav>
