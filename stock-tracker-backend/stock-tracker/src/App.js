@@ -3,6 +3,8 @@ import Trade from './components/trade';
 import Navigation from './components/navigation';
 import Portfolio from './components/portfolio';
 import './App.css';
+import { BrowserRouter as Router, Link } from 'react-router-dom'
+
 
 class App extends Component {
     constructor(){
@@ -32,13 +34,17 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <Navigation />
-                <h1>Users</h1>
-                My app
-                <Trade addTrade={this.handleAddTrade.bind(this)}/>
-                <Portfolio stocks={this.state.stocks} />
-            </div>
+            <Router>
+                <div className="App">
+                    <Navigation />
+                    <h1>Users</h1>
+                    My app
+                    <Route path='trade' component={ TradeComponent }/>
+                    <Route path='portfolio' component={ PortfolioComponent }/>
+                    <Trade addTrade={this.handleAddTrade.bind(this)}/>
+                    <Portfolio stocks={this.state.stocks} />
+                </div>
+            </Router>
         );
     }
 }
