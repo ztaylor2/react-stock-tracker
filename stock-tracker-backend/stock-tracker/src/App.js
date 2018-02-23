@@ -13,13 +13,7 @@ class App extends Component {
     }
 
     componentDidMount(){
-        fetch('/stocks', {
-              headers : { 
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-               }
-
-            })
+        fetch('/stocks')
             .then(res => res.json())
             .then(stocks => this.setState({ ...stocks }));
     }
