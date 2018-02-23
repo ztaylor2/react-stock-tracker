@@ -3,7 +3,7 @@ import Trade from './components/trade';
 import Navigation from './components/navigation';
 import Portfolio from './components/portfolio';
 import './App.css';
-import { BrowserRouter as Router, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
 
 class App extends Component {
@@ -41,12 +41,23 @@ class App extends Component {
                     My app
                     <Route path='trade' component={ TradeComponent }/>
                     <Route path='portfolio' component={ PortfolioComponent }/>
-                    <Trade addTrade={this.handleAddTrade.bind(this)}/>
-                    <Portfolio stocks={this.state.stocks} />
+                    
                 </div>
             </Router>
         );
     }
 }
+
+const TradeComponent = ({ match }) => (
+        <div>
+            <Trade addTrade={this.handleAddTrade.bind(this)}/>
+        </div>
+    )
+
+const PortfolioComponent = ({ match }) => (
+        <div>
+        <Portfolio stocks={this.state.stocks} />
+        </div>
+    )
 
 export default App;
