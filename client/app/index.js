@@ -15,6 +15,8 @@ import Home from './components/Home/Home';
 
 import HelloWorld from './components/HelloWorld/HelloWorld';
 
+import Trade from './components/Trade/Trade';
+
 import './styles/styles.scss';
 
 render((
@@ -23,6 +25,7 @@ render((
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route path="/helloworld" component={HelloWorld}/>
+        <Route path="/trade" component={Trade}/>
         <Route component={NotFound}/>
       </Switch>
     </App>
